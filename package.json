@@ -1,0 +1,11 @@
+{
+  "name": "reattend-action",
+  "version": "1.0.0",
+  "description": "GitHub Action: save PRs, commits, releases, and issues to Reattend memory",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0"
+  },
+  "license": "MIT"
+}

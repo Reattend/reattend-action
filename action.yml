@@ -1,0 +1,26 @@
+name: 'Save to Reattend'
+description: 'Automatically saves PRs, commits, releases, and issues to your Reattend memory'
+author: 'Reattend'
+branding:
+  icon: 'bookmark'
+  color: 'purple'
+
+inputs:
+  token:
+    description: 'Your Reattend API token (rat_...). Store it as a GitHub secret.'
+    required: true
+  content:
+    description: 'Custom content to save. If omitted, auto-captures from the GitHub event context (PR, push, release, issue).'
+    required: false
+  source:
+    description: 'Source label attached to the capture.'
+    required: false
+    default: 'github'
+
+outputs:
+  status:
+    description: 'Result status: saved, deduped, or filtered'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
